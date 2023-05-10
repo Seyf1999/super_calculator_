@@ -1,20 +1,20 @@
-name: Dependabot
+nom: Dependabot
 
-on:
-  schedule:
-    - cron: '0 0 * * *' # Exécuter tous les jours à minuit
+sur:
+calendrier:
+- cron: '0 * * * *' # Exécuter toutes les heures
 
-jobs:
-  dependabot:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-      - name: Setup Go
-        uses: actions/setup-go@v4
-        with:
-          go-version: 1.17
-      - name: Dependabot
-        uses: dependabot/dependabot-action@v2
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+emplois:
+dependabot:
+runs-on: ubuntu-latest
+steps:
+- name: Récupérer le code
+uses: actions/checkout@v3
+- name: Configuration de Go
+uses: actions/setup-go@v4
+with:
+go-version: 1.17
+- name: Dependabot
+uses: dependabot/dependabot-action@v2
+with:
+github_token: ${{ secrets.GITHUB_TOKEN }}
