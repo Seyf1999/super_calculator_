@@ -1,7 +1,8 @@
-# Configuration pour Go
+# Configuratio de dependabot
 ---
 version: 2
 updates:
+# Configuration pour Go
   - package-ecosystem: "gomod"
     directory: "/"
     schedule:
